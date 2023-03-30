@@ -1,0 +1,51 @@
+//KHA = -.- .... .-
+//dot = 1 unit
+//dash = 3 unit 
+
+
+const pin_t MY_LED = D7;
+void setup() 
+{
+    pinMode(MY_LED,OUTPUT);
+
+}
+void loop() 
+{
+    K();
+    delay(250*3);
+    H();
+    delay(250*3);
+    A();
+    delay(250*3);
+
+}
+void dot()
+{
+   digitalWrite(MY_LED,HIGH);
+   delay(250);
+   digitalWrite(MY_LED,LOW);
+   delay(250);
+}
+void dash()
+{
+    digitalWrite(MY_LED,HIGH);
+    delay(250*3);
+    digitalWrite(MY_LED,LOW);
+    delay(250*3);
+}
+void K(){
+    dash();
+    dot();
+    dash();
+}
+void H()
+{
+    dot();
+    dot();
+    dot();
+    dot();
+}
+void A(){
+    dot();
+    dash();
+}
